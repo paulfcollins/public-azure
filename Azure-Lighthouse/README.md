@@ -2,23 +2,28 @@
 
 Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
 
-## Azure Lighthouse Demo
+## Table of Contents
+[Repo Folder Contents](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#repo-folders)
+[Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo)
+[Deploy Policy]((https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-'customer'-subscription))
+
+## Repo Folders
 
 These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse
 
-_arm-templates_ folder contains ARM Templates for set up delegated management at a Subscription or Resource Group level, 
+[_arm-templates_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates) folder contains ARM Templates for set up delegated management at a Subscription or Resource Group level, 
 the templates also define the Subscription Role Assignments in the Managed (Customer) tenant.
 
-_policy-templates-samples_ folider contains two sample policy templates:
+[_policy-templates-samples_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/policy-template-samples) folder contains two sample policy templates:
    * Audit Storage Accounts that do not have Secure Access (Https) enabled
    * Deny Storage Accounts from being created if Secure Access (Https) is disabled during the provisioning process
 
-_scripts_ folder contains sample scripts to:
-   * Enable management of a Customer Tenant
-   * Query Azure Resource Manager (ARG) for storage accounts that do have Secure Transfer enabled
-   * Query ARG (as above) and deploy the Audit policy
-   * Query ARG (as above) and deploy the Deny policy
-   * Scripts to remove the assignments and definitions for the Audit and Deny polices
+[_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts) folder contains sample scripts to:
+   * Enable management of a Customer Tenant [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
+   * Query Azure Resource Manager (ARG) for storage accounts that do have Secure Transfer enabled [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+   * Query ARG (as above) and deploy the Audit policy [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+   * Query ARG (as above) and deploy the Deny policy [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+   * Scripts to remove the assignments and definitions for the Audit and Deny policies [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
 
 ## Deploy the Demo
 
@@ -49,4 +54,15 @@ _scripts_ folder contains sample scripts to:
    * Azure Lighthouse / Manage your Customers - in the 'Management' Portal
   
 Below is a screenshot of how it would like in the Azure Portal from the Service Providers point of view:
-![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png) "Test"
+![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png)
+  
+TODO: [ ADD SCREENSHOT FOR CUSTOMER]
+  
+## Deploy Azure Policy to 'Customer' Subscription
+  
+After a successful delegation of a subscription(s), it is possible to work in the context of the delegated subscription without switching directories as follows:
+1. Select the **Directory + Subscription** icon in the top righthand corner of the Azure Portal.
+2. Use the **Global subscription** filter and select the directory and delegated subscriptions as shown below:
+![Directory and Subscription filter in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/subscriptionpicker.png)
+  
+It is now possible to manage the delegated subscription based on the granted role assignments.
