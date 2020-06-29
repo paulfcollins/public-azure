@@ -1,4 +1,4 @@
-## [Azure Lighthouse Overview] = 'https://docs.microsoft.com/en-us/azure/lighthouse/overview'
+## [Azure Lighthouse Overview](https://docs.microsoft.com/en-us/azure/lighthouse/overview)
 
 Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
 
