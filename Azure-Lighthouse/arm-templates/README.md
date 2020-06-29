@@ -7,13 +7,13 @@ There are two deployment examples:
   
 The parameters that need to be updated are:
 
-* mspName
-* mspOfferDescription
-* managedByTenantId
+* mspName - this can be anything e.g. 'ACME Managed Services'
+* mspOfferDescription - this can be anything e.g. 'ACME Managed Services'
+* managedByTenantId - this is the value returned from the _Get-AzTenant_ cmdlet
   
-The section below will also need to be edited to provide the appropriate values
+The section below will also need to be edited to provide the appropriate values for permissions that are being assigned as part of the deployment:
 
-`  
+````yaml  
 {
     "principalId": "<AAD GROUP ID>",
     "roleDefinitionId": "ENTER SUBSCRIPTION ROLE ID",
