@@ -1,3 +1,7 @@
+## [Azure Lighthouse Overview] = 'https://docs.microsoft.com/en-us/azure/lighthouse/overview'
+
+Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
+
 ## Azure Lighthouse Demo
 
 These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse
@@ -15,3 +19,5 @@ _scripts_ folder contains sample scripts to:
 * Query ARG (as above) and deploy the Audit policy
 * Query ARG (as above) and deploy the Deny policy
 * Scripts to remove the assignments and definitions for the Audit and Deny polices
+
+## Deploy
