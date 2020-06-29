@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspName": {
+            "value": "<ENTER YOUR MSPName>"
+        },
+        "rgName": {
+            "value": "<ENTER TARGET RESOURCE GROUP NAME>"
+        },
+        "mspOfferDescription": {
+            "value": "<ENTER YOUR MSPName>"
+        },
+        "managedByTenantId": {
+            "value": "<ENTER YOUR TENANTID>"
+        },
+        "authorizations": {
+            "value": [
+                {
+                    "principalId": "<ENTER AAD GROUP ID>",
+                    "roleDefinitionId": "<ENTER SUBSCRIPTION ROLE ID>",
+                    "principalIdDisplayName": "<ENTER AAD GROUP NAME>"
+                }
+            ]
+        }
+    }
+}
