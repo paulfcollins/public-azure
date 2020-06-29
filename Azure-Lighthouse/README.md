@@ -20,4 +20,13 @@ _scripts_ folder contains sample scripts to:
 * Query ARG (as above) and deploy the Deny policy
 * Scripts to remove the assignments and definitions for the Audit and Deny polices
 
-## Deploy
+## Deploy the Demo
+
+1. The first part of the process is the create Azure Active Directory groups that will be used to manage a 'Customer' Tenant. These groups could be based on specific roles and it easier to assign permissions to groups rather than having to manage indivdual users. Users that need access to the Tenant can then be added to the group appropriate to their role.
+  * Create an AAD Group that will be assigned the _Contributor_** role
+  * Create an AAD Group that will be assigned the _Resource Policy Contributor_** role
+  * Add users to these groups
+  
+2. The process requires the _Id_ of the Tenant that will be the 'Management' Tenant. One way to find the tenant Id is to use the [Get-AzTenant](https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-aztenant?view=azps-4.3.0) cmdlet either in [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) from the Azure Portal or via a PowerShell. After running the command and noting the returned value for the _TenantId_, it can then be used in the deployment scripts in the [Scripts Folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment).
+  
+3. 
