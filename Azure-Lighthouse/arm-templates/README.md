@@ -1,6 +1,6 @@
 This folder contains ARM template and parameter files to deploy Azure Lighthouse in a 'Customer' Tenant
   
-There are two deployment examples:
+There are two ARM Template examples:
   
 1. Subscription level  - uses _DelegatedResourceManagement.json_ and _DelegatedResourceManagement.parameters.json_
 2. Resource Group level - uses _DelegatedResourceManagement.parameters.json_ and _rgDelegatedResourceManagement.parameters.json_
@@ -13,10 +13,14 @@ The parameters that need to be updated are:
   
 The section below will also need to be edited to provide the appropriate values for permissions that are being assigned as part of the deployment:
 
-````yaml  
+```yaml  
 {
     "principalId": "<AAD GROUP ID>",
     "roleDefinitionId": "ENTER SUBSCRIPTION ROLE ID",
     "principalIdDisplayName": "<ENTER AAD GROUP NAME>"
 }
-`
+```
+Use `(Get-AzADGroup -DisplayName 'AzL-Admins').id` to get the value required for _principalId_.
+Use `(Get-AzRoleDefinition -Name 'Contributor').id` to get the value required for _roleDefinitionId_. 
+[ **Note:** additional sections will be required if more than one role is being assigned ]
+Use the Display Name of the Azure AD Group that role is being assigned to.
