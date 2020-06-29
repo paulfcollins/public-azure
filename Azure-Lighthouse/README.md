@@ -44,8 +44,9 @@ _scripts_ folder contains sample scripts to:
   
 7. Next, enable Azure Lighthouse using one of the scripts in the [Deployment scripts folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment). The example deployment scripts use Cloud Shell or Visual Studio Code but it would also be possible to run the scripts directly from Powershell.
 
-8.  It can take several minutes after a successful deployment before it is visbile in the Azure Portal via two views:
+8. It can take several minutes after a successful deployment before it is visbile in the Azure Portal via two views:
    * Service Providers - in the 'Customer' portal
    * Azure Lighthouse / Manage your Customers - in the 'Management' Portal
-
-
+  
+Below is a screenshot of how it would like in the Azure Portal from the Service Providers point of view:
+![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png) "Test"
