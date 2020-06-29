@@ -47,4 +47,5 @@ _scripts_ folder contains sample scripts to:
 8.  It can take several minutes after a successful deployment before it is visbile in the Azure Portal via two views:
    * Service Providers - in the 'Customer' portal
    * Azure Lighthouse / Manage your Customers - in the 'Management' Portal
+
   
