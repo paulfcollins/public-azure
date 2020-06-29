@@ -3,7 +3,7 @@
 These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse
 
 _arm-templates_ folder contains ARM Templates for set up delegated management at a Subscription or Resource Group level, 
-the templates also defined the Role Assignments in the Managed (Customer) tenant.
+the templates also define the Subscription Role Assignments in the Managed (Customer) tenant.
 
 _policy-templates-samples_ folider contains two sample policy templates:
   * Audit Storage Accounts that do not have Secure Access (Https) enabled
