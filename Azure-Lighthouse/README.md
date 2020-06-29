@@ -3,10 +3,10 @@
 Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
 
 ## Table of Contents
-[Repo Folder Contents](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#repo-folders) 
-[Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo) 
-[Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription) 
-[Deploy Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-a-delegated-subscription)
+* [Repo Folder Contents](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#repo-folders) 
+* [Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo) 
+* [Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription) 
+* [Deploy Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-a-delegated-subscription)
 
 ## Repo Folders
 
@@ -74,3 +74,4 @@ Let's take it a step further and deploy two sample policies to the delegated sub
   
 ## Remove an Azure Policy from a Delegated Subscription 
   
+TODO:
