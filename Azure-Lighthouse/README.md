@@ -27,6 +27,6 @@ _scripts_ folder contains sample scripts to:
   * Create an AAD Group that will be assigned the _Resource Policy Contributor_** role
   * Add users to these groups
   
-2. The process requires the _Id_ of the Tenant that will be the 'Management' Tenant. One way to find the tenant Id is to use the [Get-AzTenant](https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-aztenant?view=azps-4.3.0) cmdlet either in [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) from the Azure Portal or via a PowerShell. After running the command and noting the returned value for the _TenantId_, it can then be used in the deployment scripts in the [Scripts Folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment).
+2. The process requires the _Id_ of the Tenant that will be the 'Management' Tenant. One way to find the _Tenant Id_ is to use the [Get-AzTenant](https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-aztenant?view=azps-4.3.0) cmdlet either in [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) from the Azure Portal or via PowerShell. After running the command and noting the returned value for the _TenantId_, it will be used in the deployment template parameter file in the [Arm Templates Folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates).
   
 3. 
