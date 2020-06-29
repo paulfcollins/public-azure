@@ -25,7 +25,7 @@ foreach ($ManagedSub in $ManagedSubscriptions)
     # [ UPDATE THE VARIABLES AS REQUIRED ]
     $DeploymentName = 'AzlStorageAuditPolicy'                     
     $location = 'northeurope'
-    $policytemplateURI = 'https://raw.githubusercontent.com/paulfcollins/public-azure/master/Azure-Lighthouse/policy-template-samples/enforceHttpsStorage.json' 
+    $policytemplateURI = 'https://raw.githubusercontent.com/paulfcollins/azure/master/Azure-Lighthouse/policy-template-samples/enforceHttpsStorage.json' 
 
     New-AzDeployment -Name $DeploymentName `
         -Location $location `
