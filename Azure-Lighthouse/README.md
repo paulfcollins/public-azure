@@ -3,9 +3,10 @@
 Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
 
 ## Table of Contents
-[Repo Folder Contents](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#repo-folders)
-[Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo)
-[Deploy Policy]((https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-'customer'-subscription))
+[Repo Folder Contents](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#repo-folders) 
+[Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo) 
+[Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription) 
+[Deploy Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-a-delegated-subscription)
 
 ## Repo Folders
 
@@ -35,7 +36,7 @@ the templates also define the Subscription Role Assignments in the Managed (Cust
 2. The process requires the _Id_ of the tenant that will be the 'Management' Tenant. One way to find the _Tenant Id_ is to use the [Get-AzTenant](https://docs.microsoft.com/en-us/powershell/module/az.accounts/get-aztenant?view=azps-4.3.0) cmdlet either in [Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) from the Azure Portal or via PowerShell. After running the command and noting the returned value for the _TenantId_, it will be used in the deployment template parameter file in the [Arm Templates Folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates).
   
 3. Next, we need the _Id_ of the Azure AD Group(s) and Subscription Role(s) and we get these by running the following cmdlets:
-   * `(Get-AzADGroup -DisplayName 'AzL-Admins').id`
+   * `(Get-AzADGroup -DisplayName '<AAD GROUP NAME>').id`
    * `(Get-AzRoleDefinition -Name 'Contributor').id`  
    [ **Note:** If you are assigning more than one Subscription Role, you will need to run that cmdlet to get the appropriate Ids and update the ARM Template to reflect those addtional roles]
   
@@ -58,7 +59,7 @@ Below is a screenshot of how it would like in the Azure Portal from the Service 
   
 TODO: [ ADD SCREENSHOT FOR CUSTOMER]
   
-## Deploy Azure Policy to 'Customer' Subscription
+## Manage a 'Customer' Subscription
   
 After a successful delegation of a subscription(s), it is possible to work in the context of the delegated subscription without switching directories as follows:
 1. Select the **Directory + Subscription** icon in the top righthand corner of the Azure Portal.
@@ -66,3 +67,10 @@ After a successful delegation of a subscription(s), it is possible to work in th
 ![Directory and Subscription filter in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/subscriptionpicker.png)
   
 It is now possible to manage the delegated subscription based on the granted role assignments.
+  
+## Deploy Azure Policy to a Delegated Subscription
+  
+Let's take it a step further and deploy two sample policies to the delegated subscrption. The scripts are in the [_policy-deployment_ folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment) within the _scripts_ folder. 
+  
+## Remove an Azure Policy from a Delegated Subscription 
+  

@@ -7,5 +7,14 @@ The `$MSPTenant` variable in the scripts need to be updated with the _Tenant Id_
 *Exmaple Scripts*
   
 1. Query Storage Accounts for the Secure Transfer setting
-2. Deploy an Audit Policy for Storage Accounts where the Secure Transfer setting is disabled
-3. Deploy a Deny Policy to prevent Storage Accounts being created with the Secure Transfer setting disabled
+2. Deploy an Audit Policy for Storage Accounts where the Secure Transfer setting is disabled 
+TODO: Add screenshots for Audit Policy compliance 
+3. Deploy a Deny Policy to prevent Storage Accounts being created with the Secure Transfer setting disabled 
+  
+Once the Deny policy has been deployed, try to create a new Storage Account but disable the Secure Transfer option 
+TODO: Screenshot
+  
+When the user tries to create the Storage Account, the policy will prevent the creation of the storage account as shown below:
+
+![Failure to create Storage Account Error](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/denypolicy1.png)
+![Error Details showing Policy denied creation](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/denypolicy2.png)
