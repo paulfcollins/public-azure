@@ -31,8 +31,8 @@ _scripts_ folder contains sample scripts to:
   
 3. Next, we need the _Id_ of the Azure AD Group(s) and Subscription Role(s) and we get these by running the following cmdlets:
    * `(Get-AzADGroup -DisplayName 'AzL-Admins').id`
-   * `(Get-AzRoleDefinition -Name 'Contributor').id`
-  [ **Note:** If you are assigning more than one Subscription Role, you will need to run that cmdlet to get the appropriate Ids and update the ARM Template to reflect those addtional roles]
+   * `(Get-AzRoleDefinition -Name 'Contributor').id`  
+   [ **Note:** If you are assigning more than one Subscription Role, you will need to run that cmdlet to get the appropriate Ids and update the ARM Template to reflect those addtional roles]
   
 4. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription being logged in.
   
