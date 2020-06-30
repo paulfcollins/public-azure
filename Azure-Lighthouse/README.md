@@ -58,7 +58,8 @@ the templates also define the Subscription Role Assignments in the Managed (Cust
 Below is a screenshot of how it would like in the Azure Portal from the Service Providers point of view:
 ![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png)
   
-TODO: [ ADD SCREENSHOT FOR CUSTOMER]
+Below is a screenshot from the point of view of the 'Customer': 
+![Service Providers view in Azure Portal](../images/customerviewofmsp.png)
   
 ## Manage a 'Customer' Subscription
   
