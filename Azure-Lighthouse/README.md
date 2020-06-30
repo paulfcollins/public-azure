@@ -86,3 +86,12 @@ This method is fine if you do not have too many Delegated Subscriptions but usin
    * Remove the Deny Policy assignment
    * Remove the Deny Policy definition
   
+## Remove the Delegation of the Subscription
+
+Removing a Delegation can be achieved in one of two ways: 
+1. Via the Azure Portal:
+   * Subscription Owners can go to the Service Providers page and delete the delegation
+   * Service Provider users who have been assigned the **Managed Services Registration Assignment Delete Role** can go the the My Customers page and delete the delegation
+  
+2. Programmatically using a script, an exmaple of which is available in the [_Removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/removal) folder within the _scripts_ folder. 
+  
