@@ -1,4 +1,6 @@
 This folder contains the scripts to deploy Azure Policy into a 'Customer' Tenant.
+
+[ **Note:** Before running these scripts make sure that you have running them under the context of the MSPTenant. Use `Connect-AzAccount` to switch if required ] 
   
 The scripts query [Azure Resource Graph](https://azure.microsoft.com/en-us/features/resource-graph/) to identify resources that will be targets for Azure Policy.
   
