@@ -15,7 +15,7 @@ $windowstemplateparameterfile = "<FILE PATH>\DelegatedResourceManagement.paramet
 $linuxtemplatefile = "<FILE PATH>/DelegatedResourceManagement.json"
 $linuxtemplateparameterfile = "<FILE PATH>/DelegatedResourceManagement.parameters.json"
 
-Write-Host 'Setting Internal Sub as target' -ForegroundColor Green
+Write-Host 'Setting target Subscription' -ForegroundColor Green
 
 <# 
     I wanted to test against a single subscription, so specified the Subscription name
