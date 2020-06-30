@@ -8,6 +8,7 @@ Azure Lighthouse offers service providers a single control plane to view and man
 * [Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription) 
 * [Deploy Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-a-delegated-subscription)
 * [Remove an Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-an-azure-policy-from-a-delegated-subscription)
+* [Remove a Delegation](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-the-delegation-of-the-subscription) 
 
 ## Repo Folders
 
