@@ -13,10 +13,9 @@ The `$MSPTenant` variable in the scripts need to be updated with the _Tenant Id_
 Below are a couple of screenshots showing the Compliance of the deployed Azure Policy templates and a filtered view based on the Category that was assigned via the ARM Template 
 ![Azure Policy Compliance](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/auditpolicycompliance.png) 
 ![View of Azure Policies filtered by Category](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/policyfiltered.png) 
-3. Deploy a Deny Policy to prevent Storage Accounts being created with the Secure Transfer setting disabled 
   
+3. Deploy a Deny Policy to prevent Storage Accounts being created with the Secure Transfer setting disabled  
 Once the Deny policy has been deployed, try to create a new Storage Account but disable the Secure Transfer option 
-  
 When the user tries to create the Storage Account, the policy will prevent the creation of the storage account as shown below:
 
 ![Failure to create Storage Account Error](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/denypolicy1.png)
