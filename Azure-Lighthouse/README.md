@@ -43,11 +43,11 @@ the templates also define the Subscription Role Assignments in the Managed (Cust
   
 4. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription being logged in.
   
-5. If the Subscription owner has access to multiple subscriptions, run `Get-AzContext` to check that the correct subscription is set. If not, then run the following:
+5. Next, update the ARM Template Parameter file. The [README.md file](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/arm-templates/README.md) has more information on what needs to be updated.
+  
+6. If the Subscription owner has access to multiple subscriptions, run `Get-AzContext` to check that the correct subscription is set. If not, then run the following:
    * `Get-AzSubscription`, identify the correct subscription and note the Subscription Id
    * `Set-AzContext -Subscription <SubscriptionId>`
-  
-6. Next, update the ARM Template Parameter file. The [README.md file](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/arm-templates/README.md) has more information on what needs to be updated.
   
 7. Next, enable Azure Lighthouse using one of the scripts in the [Deployment scripts folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment). The example deployment scripts use Cloud Shell or Visual Studio Code but it would also be possible to run the scripts directly from Powershell.
 
