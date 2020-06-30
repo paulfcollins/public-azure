@@ -11,7 +11,7 @@
                 "description": "Audit https traffic-only for storage account",
                 "displayName": "Audit https traffic-only for storage account",
                 "metadata": {
-                    "category": "<ENTER CATEGORY NAME e.g. MSP Policy>",
+                    "category": "MSP Policy",
                     "version": "1.0.0"
                 },
                 "policyRule": {
