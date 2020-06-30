@@ -30,6 +30,6 @@ foreach ($ManagedSub in $ManagedSubscriptions)
     {
     Remove-AzPolicyDefinition -Name 'enforce-https-storage' -SubscriptionId $ManagedSub.subscriptionId -Verbose
 
-    Write-Host "Polcy Assignment has been deleted" -ForegroundColor Green
+    Write-Host "Polcy Definition has been deleted" -ForegroundColor Green
     }
 }

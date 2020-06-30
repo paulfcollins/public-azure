@@ -1,7 +1,7 @@
 This folder contains two scripts to deploy Azure Lighthouse into a 'Customer' Tenant.
 
-1. Via Cloud Shell - deployAzL-cloudshell.ps1
-2. Via Visual Studio Code on a local machine (Windows or Linux) - deployAzL-vscode.ps1
+1. Via Cloud Shell - `deployAzL-cloudshell.ps1`
+2. Via Visual Studio Code on a local machine (Windows or Linux) - `deployAzL-vscode.ps1`
   
 The [Arm Templates folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates) has example templates to enable Azure Lighthouse at:
   
