@@ -59,7 +59,7 @@ Below is a screenshot of how it would like in the Azure Portal from the Service 
 ![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png)
   
 Below is a screenshot from the point of view of the 'Customer': 
-![Service Providers view in Azure Portal](/images/customerviewofmsp.png)
+![Service Providers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/customerviewofmsp.png)
   
 ## Manage a 'Customer' Subscription
   
@@ -76,4 +76,12 @@ Let's take it a step further and deploy two sample policies to the delegated sub
   
 ## Remove an Azure Policy from a Delegated Subscription 
   
-TODO:
+Now that we have tested and proved the deplyment of Azure Policy to a Delegated 'Customer' Subscription, there a number of ways to remove the assigned policies and definitions: 
+1. Via the Azure Portal as shown below: 
+![Delete Azure Policy via Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/deletepolicyassignment1.png) 
+2. Programmatically using the example scripts in the _policy-removal_ folder. There are four sample scripts provided: 
+   * Remove the Audit Policy assignment
+   * Remove the Audit Policy definition
+   * Remove the Deny Policy assignment
+   * Remove the Deny Policy definition
+  
