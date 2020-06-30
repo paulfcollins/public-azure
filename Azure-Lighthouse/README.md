@@ -59,7 +59,7 @@ Below is a screenshot of how it would like in the Azure Portal from the Service 
 ![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png)
   
 Below is a screenshot from the point of view of the 'Customer': 
-![Service Providers view in Azure Portal](../images/customerviewofmsp.png)
+![Service Providers view in Azure Portal](/images/customerviewofmsp.png)
   
 ## Manage a 'Customer' Subscription
   
