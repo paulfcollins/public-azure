@@ -4,7 +4,7 @@ This folder contains the scripts to deploy Azure Policy into a 'Customer' Tenant
   
 The scripts query [Azure Resource Graph](https://azure.microsoft.com/en-us/features/resource-graph/) to identify resources that will be targets for Azure Policy.
   
-The `$MSPTenant` variable in the scripts need to be updated with the _Tenant Id_ value returned by the _Get-AzTenant_ cmdlet.
+The `$MSPTenant` variable in the scripts need to be updated with the _Tenant Id_ value returned by the `Get-AzTenant` cmdlet.
   
 *Exmaple Scripts*
   
