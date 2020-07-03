@@ -12,11 +12,13 @@ Azure Lighthouse offers service providers a single control plane to view and man
 
 ## Introduction
 
-The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could effectively manage those tenants effectively without necesarily having to us multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription and a subscription in a enterprise tenant. There are some key scenatios where Azure Lighthouse can be utilised as shown below:
+The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could manage those tenants effectively without necesarily having to use multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription and a subscription in a enterprise tenant. 
+  
+There are some key scenatios where Azure Lighthouse can be utilised as shown below:
 ![Azure Lighthouse Overview](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/lighthouseoverview.png) 
 In this demo I choose to show how deploy Azure Policy from an MSP tenant to an enterprise subscription. 
   
-These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse
+These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse. I utilised [Visual Studio Code](https://code.visualstudio.com/) to run the scripts but you could upload all the necessary files into Cloud Shell and deploy it all from there (I have included a sample script in the _scripts_ folder for this scenario).
 
 [_arm-templates_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates) folder contains ARM Templates for set up delegated management at a Subscription or Resource Group level, 
 the templates also define the Subscription Role Assignments in the Managed (Customer) tenant.
