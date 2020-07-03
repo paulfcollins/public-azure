@@ -12,11 +12,11 @@ Azure Lighthouse offers service providers a single control plane to view and man
 
 ## Introduction
 
-The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could manage those tenants effectively without necesarily having to use multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription and a subscription in a enterprise tenant. 
+The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could manage those tenants effectively without necesarily having to use multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription (the MSP) and a subscription in a enterprise tenant. 
   
 There are some key scenatios where Azure Lighthouse can be utilised as shown below:
 ![Azure Lighthouse Overview](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/lighthouseoverview.png) 
-In this demo I choose to show how deploy Azure Policy from an MSP tenant to an enterprise subscription. 
+In this demo I choose to show how to deploy Azure Policy from an MSP tenant to an enterprise subscription. 
   
 These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse. I utilised [Visual Studio Code](https://code.visualstudio.com/) to run the scripts but you could upload all the necessary files into Cloud Shell and deploy it all from there (I have included a sample script in the _scripts_ folder for this scenario).
 
@@ -28,15 +28,15 @@ the templates also define the Subscription Role Assignments in the Managed (Cust
    * Deny Storage Accounts from being created if Secure Access (Https) is disabled during the provisioning process
 
 [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts) folder contains sample scripts to:
-   * Enable management of a Customer Tenant [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
-   * Query Azure Resource Manager (ARG) for storage accounts that do have Secure Transfer enabled [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-   * Query ARG (as above) and deploy the Audit policy [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-   * Query ARG (as above) and deploy the Deny policy [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-   * Scripts to remove the assignments and definitions for the Audit and Deny policies [Link](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
+   * Enable management of a Customer Tenant [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
+   * Query Azure Resource Manager (ARG) for storage accounts that do have Secure Transfer enabled [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+   * Query ARG (as above) and deploy the Audit policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+   * Query ARG (as above) and deploy the Deny policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+   * Scripts to remove the assignments and definitions for the Audit and Deny policies [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
 
 ## Deploy the Demo
 
-1. The first part of the process is the create Azure Active Directory groups that will be used to manage a 'Customer' Tenant. These groups could be based on specific roles and it easier to assign permissions to groups rather than having to manage indivdual users. Users that need access to the Tenant can then be added to the group appropriate to their role.
+1. The first part of the process is the create Azure Active Directory groups that will be used to manage a 'Customer' Tenant. These groups could be based on specific roles and it is easier to assign permissions to groups rather than having to manage indivdual users. Users that need access to the Tenant can then be added to the group appropriate to their role.
    * Create an AAD Group that will be assigned the **_Contributor_** role
    * Create an AAD Group that will be assigned the **_Resource Policy Contributor_** role
    * Add users to these groups
