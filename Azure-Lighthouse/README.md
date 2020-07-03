@@ -3,15 +3,19 @@
 Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
 
 ## Table of Contents
-* [Repo Folder Contents](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#repo-folders) 
+* [Introduction](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#introduction) 
 * [Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo) 
 * [Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription) 
 * [Deploy Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-a-delegated-subscription)
 * [Remove an Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-an-azure-policy-from-a-delegated-subscription)
 * [Remove a Delegation](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-the-delegation-of-the-subscription) 
 
-## Repo Folders
+## Introduction
 
+The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could effectively manage those tenants effectively without necesarily having to us multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription and a subscription in a enterprise tenant. There are some key scenatios where Azure Lighthouse can be utilised as shown below:
+![Azure Lighthouse Overview](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/lighthouseoverview.png) 
+In this demo I choose to show how deploy Azure Policy from an MSP tenant to an enterprise subscription. 
+  
 These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse
 
 [_arm-templates_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates) folder contains ARM Templates for set up delegated management at a Subscription or Resource Group level, 
