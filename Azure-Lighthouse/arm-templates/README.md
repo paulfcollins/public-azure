@@ -27,9 +27,10 @@ The section below will also need to be edited to provide the appropriate values 
 }
 ```
 Use `(Get-AzADGroup -DisplayName '<AAD GROUP NAME').id` to get the value required for _principalId_. 
-Use `(Get-AzRoleDefinition -Name 'Contributor').id` to get the value required for _roleDefinitionId_.  
-  [ **Note:** additional sections will be required if more than one role is being assigned ] 
-  Use the Display Name of the Azure AD Group that role is being assigned to for _principalIdDisplayName_. 
+Use `(Get-AzRoleDefinition -Name 'Contributor').id` to get the value required for _roleDefinitionId_.
+Use the Display Name of the Azure AD Group that role is being assigned to for _principalIdDisplayName_. 
+  
+[ **Note:** additional sections will be required if more than one role is being assigned ] 
   
 To deploy Azure Policy to a delegated subscription, the _roleDefinitionId_ for the **Resource Policy Contributor** role is required.
   
