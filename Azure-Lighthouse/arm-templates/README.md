@@ -36,7 +36,7 @@ To deploy Azure Policy to a delegated subscription, the _roleDefinitionId_ for t
   
 It is also [recommended](https://docs.microsoft.com/en-us/azure/lighthouse/how-to/onboard-customer) to assign the **Managed Services Registration assignment Delete Role** Id (91c1777a-f3dc-4fae-b103-61d183457e46) to templates. This allows designated users to remove a delegation from a customer tenant if required. 
   
-Below is a screenshot of a sample Parameters file: 
+Below is a screenshot of a sample Parameters file:  
 ![ARM Template Parameters File](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/exampleARMtemplateParams.png) 
  
 The _Contributor_ role has a _roleDefinitionId_ of `b24988ac-6180-42a0-ab88-20f7382dd24c`  
