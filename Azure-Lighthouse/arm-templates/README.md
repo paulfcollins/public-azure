@@ -29,7 +29,7 @@ The section below will also need to be edited to provide the appropriate values 
 Use `(Get-AzADGroup -DisplayName '<AAD GROUP NAME').id` to get the value required for _principalId_. 
 Use `(Get-AzRoleDefinition -Name 'Contributor').id` to get the value required for _roleDefinitionId_.  
   [ **Note:** additional sections will be required if more than one role is being assigned ] 
-Use the Display Name of the Azure AD Group that role is being assigned to for _principalIdDisplayName_. 
+  Use the Display Name of the Azure AD Group that role is being assigned to for _principalIdDisplayName_. 
   
 To deploy Azure Policy to a delegated subscription, the _roleDefinitionId_ for the **Resource Policy Contributor** role is required.
   
@@ -38,8 +38,8 @@ It is also [recommended](https://docs.microsoft.com/en-us/azure/lighthouse/how-t
 Below is a screenshot of a sample Parameters file: 
 ![ARM Template Parameters File](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/exampleARMtemplateParams.png) 
  
-The _Contributor_ role has a _roleDefinitionId_ of `b24988ac-6180-42a0-ab88-20f7382dd24c` 
-The _Resource Policy Contributor_ role has a _roleDefinitionId_ of `36243c78-bf99-498c-9df9-86d9f8d28608` 
+The _Contributor_ role has a _roleDefinitionId_ of `b24988ac-6180-42a0-ab88-20f7382dd24c`  
+  The _Resource Policy Contributor_ role has a _roleDefinitionId_ of `36243c78-bf99-498c-9df9-86d9f8d28608` 
   
 
   
