@@ -52,8 +52,8 @@ The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-L
 4. Next, update the ARM Template Parameter file. The [README.md file](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/arm-templates/README.md) has more information on what needs to be updated. 
   
   **The remaining steps are carried out in the context of the 'Customer' subscription** 
-  
-5. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription to be managed by Azure Lighthouse. 
+
+5. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription to be managed by the MSP via Azure Lighthouse. 
   
 6. If the Subscription owner has access to multiple subscriptions, run `Get-AzContext` to check that the correct subscription is set. If not, then run the following:
    * `Get-AzSubscription`, identify the correct subscription and note the Subscription Id
@@ -65,7 +65,7 @@ The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-L
    * Service Providers - in the 'Customer' portal
    * Azure Lighthouse / Manage your Customers - in the 'Management' Portal
   
-Below is a screenshot of how it would look in the Azure Portal from the Service Providers point of view:
+Below is a screenshot of how it would look in the Azure Portal from the MSP point of view:
 ![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png)
   
 Below is a screenshot from the point of view of the 'Customer': 
