@@ -1,4 +1,4 @@
-This folder contains the scripts to deploy Azure Policy into a 'Customer' Tenant.
+This folder contains the scripts to deploy Azure Policy into a 'Customer' Subscription.
 
 [ **Note:** Before running these scripts make sure that you have running them under the context of the MSPTenant subscription. Use `Connect-AzAccount` to switch if required ] 
   
