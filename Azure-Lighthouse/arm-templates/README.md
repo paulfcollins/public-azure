@@ -26,7 +26,7 @@ The section below will also need to be edited to provide the appropriate values 
     "principalIdDisplayName": "<ENTER AAD GROUP NAME>"
 }
 ```
-Use `(Get-AzADGroup -DisplayName '<AAD GROUP NAME').id` to get the value required for _principalId_. 
+Use `(Get-AzADGroup -DisplayName '<AAD GROUP NAME').id` to get the value required for _principalId_.
 Use `(Get-AzRoleDefinition -Name 'Contributor').id` to get the value required for _roleDefinitionId_.
 Use the Display Name of the Azure AD Group that role is being assigned to for _principalIdDisplayName_. 
   
