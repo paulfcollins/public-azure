@@ -31,7 +31,7 @@ Use `(Get-AzRoleDefinition -Name 'Contributor').id` to get the value required fo
 [ **Note:** additional sections will be required if more than one role is being assigned ] 
 Use the Display Name of the Azure AD Group that role is being assigned to for _principalIdDisplayName_. 
   
-To deploy Azure Policy to a delegated subscription, the _roleDefinitionId_ for the **Resource Policy Contributor** () role is required.
+To deploy Azure Policy to a delegated subscription, the _roleDefinitionId_ for the **Resource Policy Contributor** role is required.
   
 It is also [recommended](https://docs.microsoft.com/en-us/azure/lighthouse/how-to/onboard-customer) to assign the **Managed Services Registration assignment Delete Role** Id (91c1777a-f3dc-4fae-b103-61d183457e46) to templates. This allows designated users to remove a delegation from a customer tenant if required. 
   
