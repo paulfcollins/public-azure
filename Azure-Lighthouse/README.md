@@ -51,6 +51,7 @@ The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-L
   
 4. Next, update the ARM Template Parameter file. The [README.md file](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/arm-templates/README.md) has more information on what needs to be updated. 
   
+  **The remaining steps are carried out in the context of the 'Customer' subscription**
 5. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription to be managed by Azure Lighthouse. 
   
 6. If the Subscription owner has access to multiple subscriptions, run `Get-AzContext` to check that the correct subscription is set. If not, then run the following:
