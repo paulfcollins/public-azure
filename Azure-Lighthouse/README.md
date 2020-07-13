@@ -1,31 +1,32 @@
-## [Azure Lighthouse Overview](https://docs.microsoft.com/en-us/azure/lighthouse/overview)
+# [Azure Lighthouse Overview](https://docs.microsoft.com/en-us/azure/lighthouse/overview)
 
 Azure Lighthouse offers service providers a single control plane to view and manage Azure across all their customers with higher automation, scale, and enhanced governance. With Azure Lighthouse, service providers can deliver managed services using comprehensive and robust management tooling built into the Azure platform. This offering can also benefit enterprise IT organizations managing resources across multiple tenants.
 
 ## Table of Contents
-* [Introduction](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#introduction) 
-* [Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo) 
-* [Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription) 
+
+* [Introduction](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#introduction)  
+* [Deploy the Demo](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-the-demo)  
+* [Manage a Subscription](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#manage-a-customer-subscription)  
 * [Deploy Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#deploy-azure-policy-to-a-delegated-subscription)
 * [Remove an Azure Policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-an-azure-policy-from-a-delegated-subscription)
-* [Remove a Delegation](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-the-delegation-of-the-subscription) 
+* [Remove a Delegation](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse#remove-the-delegation-of-the-subscription)  
 
 ## Introduction
 
-The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could manage those tenants effectively without necesarily having to use multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription (the MSP) and a subscription in a enterprise tenant. 
+The goal I had in mind here was to show how an Enterprise customer with multiple Azure AD Tenants could manage those tenants effectively without necesarily having to use multiple portals with multiple accounts. In order to test this out I utilised a personal MSDN subscription (the MSP) and a subscription in a enterprise tenant.  
   
 There are some key scenatios where Azure Lighthouse can be utilised as shown below:
-![Azure Lighthouse Overview](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/lighthouseoverview.png) 
-In this demo I chose to show how to deploy Azure Policy from an MSP tenant to an enterprise subscription. 
+![Azure Lighthouse Overview](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/lighthouseoverview.png)  
+In this demo I chose to show how to deploy Azure Policy from an MSP tenant to an enterprise subscription.  
   
 These folders contain the necessary ARM templates and scripts to demo setting up Azure Lighthouse. I utilised [Visual Studio Code](https://code.visualstudio.com/) to run the scripts but you could upload all the necessary files into Cloud Shell and deploy it all from there (I have included a sample script in the _scripts_ folder for this scenario).
 
-The [_arm-templates_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates) folder contains ARM Templates for setting up delegated management at a Subscription or Resource Group level, 
+The [_arm-templates_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/arm-templates) folder contains ARM Templates for setting up delegated management at a Subscription or Resource Group level,  
 the templates also define the Subscription Role Assignments in the Managed (Customer) tenant.
 
 The [_policy-templates-samples_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/policy-template-samples) folder contains two sample policy templates:
-   * Audit Storage Accounts that do not have Secure Access (Https) enabled
-   * Deny Storage Accounts from being created if Secure Access (Https) is disabled during the provisioning process
+* Audit Storage Accounts that do not have Secure Access (Https) enabled
+  * Deny Storage Accounts from being created if Secure Access (Https) is disabled during the provisioning process
 
 The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts) folder contains sample scripts to:
    * Enable management of a Customer Tenant [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
