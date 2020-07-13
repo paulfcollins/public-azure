@@ -25,19 +25,22 @@ The [_arm-templates_](https://github.com/paulfcollins/public-azure/tree/master/A
 the templates also define the Subscription Role Assignments in the Managed (Customer) tenant.
 
 The [_policy-templates-samples_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/policy-template-samples) folder contains two sample policy templates:
+
 * Audit Storage Accounts that do not have Secure Access (Https) enabled
-  * Deny Storage Accounts from being created if Secure Access (Https) is disabled during the provisioning process
+* Deny Storage Accounts from being created if Secure Access (Https) is disabled during the provisioning process
 
 The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts) folder contains sample scripts to:
-   * Enable management of a Customer Tenant [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
-   * Query Azure Resource Graph (ARG) for storage accounts that do not have Secure Transfer enabled [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-   * Query ARG (as above) and deploy the Audit policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-   * Query ARG (as above) and deploy the Deny policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-   * Scripts to remove the assignments and definitions for the Audit and Deny policies [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
+
+* Enable management of a Customer Tenant [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
+* Query Azure Resource Graph (ARG) for storage accounts that do not have Secure Transfer enabled [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+* Query ARG (as above) and deploy the Audit policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+* Query ARG (as above) and deploy the Deny policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+* Scripts to remove the assignments and definitions for the Audit and Deny policies [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
 
 ## Deploy the Demo
   
-  **Steps 1, 2, & 3 are carried out in the Azure AD Tenant of the MSP (referred to as the 'Management' tenant below)**
+### Steps 1, 2, & 3 are carried out in the Azure AD Tenant of the MSP (referred to as the 'Management' tenant below)
+
 1. The first part of the process is the create Azure Active Directory groups in the 'Management' Tenant that will be used to manage a 'Customer' subscription. These groups could be based on specific roles and it is easier to assign permissions to groups rather than having to manage indivdual users. Users that need access to the 'Customer' subscription can then be added to the group appropriate to their role.
    * Create an AAD Group that will be assigned the **_Contributor_** role
    * Create an AAD Group that will be assigned the **_Resource Policy Contributor_** role
@@ -50,9 +53,9 @@ The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-L
    * `(Get-AzRoleDefinition -Name 'Contributor').id`  
    [ **Note:** If you are assigning more than one Subscription Role, you will need to run that cmdlet to get the appropriate Ids and update the ARM Template to reflect those addtional roles]
   
-4. Next, update the ARM Template Parameter file. The [README.md file](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/arm-templates/README.md) has more information on what needs to be updated. 
+4. Next, update the ARM Template Parameter file. The [README.md file](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/arm-templates/README.md) has more information on what needs to be updated.  
   
-  **The remaining steps are carried out in the context of the 'Customer' subscription** 
+### The remaining steps are carried out in the context of the 'Customer' subscription
 
 5. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription to be managed by the MSP via Azure Lighthouse.  
   
@@ -75,6 +78,7 @@ Below is a screenshot from the point of view of the 'Customer':
 ## Manage a 'Customer' Subscription
   
 After the successful delegation of subscription(s), it is possible to work in the context of the delegated subscription without switching directories as follows:
+
 1. Select the **Directory + Subscription** icon in the top righthand corner of the Azure Portal.
 2. Use the **Global subscription** filter and select the directory and delegated subscriptions as shown below:
 ![Directory and Subscription filter in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/subscriptionpicker.png)
@@ -88,7 +92,8 @@ Let's take it a step further and deploy two sample policies to the delegated sub
 ## Remove an Azure Policy from a Delegated Subscription  
   
 Now that we have tested and proved the deplyment of Azure Policy to a Delegated 'Customer' Subscription, there a number of ways to remove the assigned policies and definitions:  
-1. Via the Azure Portal as shown below: 
+
+1. Via the Azure Portal as shown below:
 ![Delete Azure Policy via Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/deletepolicyassignment1.png)  
 This method is fine if you do not have too many Delegated Subscriptions, but using scripts would be more efficient for a scale deployment.  
 2. Programmatically using the example scripts in the [_policy-removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal) folder. There are four sample scripts provided:  
@@ -99,7 +104,8 @@ This method is fine if you do not have too many Delegated Subscriptions, but usi
   
 ## Remove the Delegation of the Subscription
 
-Removing a Delegation can be achieved in one of two ways: 
+Removing a Delegation can be achieved in one of two ways:  
+
 1. Via the Azure Portal:
    * Subscription Owners can go to the Service Providers page and delete the delegation
    * Service Provider users who have been assigned the **Managed Services Registration Assignment Delete Role** can go the the My Customers page and delete the delegation
