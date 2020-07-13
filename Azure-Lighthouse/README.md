@@ -31,7 +31,7 @@ The [_policy-templates-samples_](https://github.com/paulfcollins/public-azure/tr
 
 The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts) folder contains sample scripts to:
 
-* Enable management of a Customer Tenant [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
+* Enable management of a Customer Tenant [LINK](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
 * Query Azure Resource Graph (ARG) for storage accounts that do not have Secure Transfer enabled [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
 * Query ARG (as above) and deploy the Audit policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
 * Query ARG (as above) and deploy the Deny policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
