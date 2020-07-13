@@ -53,7 +53,7 @@ The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-L
   
   **The remaining steps are carried out in the context of the 'Customer' subscription** 
 
-5. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription to be managed by the MSP via Azure Lighthouse. 
+5. Now, log into the 'Customer' tenant using `Connect-AzAccount` using a non-guest account in the 'Customer' tenant. This account must have the [Owner builtin role](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) for the subscription to be managed by the MSP via Azure Lighthouse.  
   
 6. If the Subscription owner has access to multiple subscriptions, run `Get-AzContext` to check that the correct subscription is set. If not, then run the following:
    * `Get-AzSubscription`, identify the correct subscription and note the Subscription Id
@@ -68,7 +68,7 @@ The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-L
 Below is a screenshot of how it would look in the Azure Portal from the MSP point of view:
 ![My Customers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/MSPLighthouseview.png)
   
-Below is a screenshot from the point of view of the 'Customer': 
+Below is a screenshot from the point of view of the 'Customer':  
 ![Service Providers view in Azure Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/customerviewofmsp.png)
   
 ## Manage a 'Customer' Subscription
@@ -82,15 +82,15 @@ It is now possible to manage the delegated subscription based on the granted rol
   
 ## Deploy Azure Policy to a Delegated Subscription
   
-Let's take it a step further and deploy two sample policies to the delegated subscription. The scripts are in the [_policy-deployment_ folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment) within the _scripts_ folder. 
+Let's take it a step further and deploy two sample policies to the delegated subscription. The scripts are in the [_policy-deployment_ folder](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment) within the _scripts_ folder.  
   
-## Remove an Azure Policy from a Delegated Subscription 
+## Remove an Azure Policy from a Delegated Subscription  
   
-Now that we have tested and proved the deplyment of Azure Policy to a Delegated 'Customer' Subscription, there a number of ways to remove the assigned policies and definitions: 
+Now that we have tested and proved the deplyment of Azure Policy to a Delegated 'Customer' Subscription, there a number of ways to remove the assigned policies and definitions:  
 1. Via the Azure Portal as shown below: 
-![Delete Azure Policy via Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/deletepolicyassignment1.png) 
-This method is fine if you do not have too many Delegated Subscriptions, but using scripts would be more efficient for a scale deployment. 
-2. Programmatically using the example scripts in the [_policy-removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal) folder. There are four sample scripts provided: 
+![Delete Azure Policy via Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/deletepolicyassignment1.png)  
+This method is fine if you do not have too many Delegated Subscriptions, but using scripts would be more efficient for a scale deployment.  
+2. Programmatically using the example scripts in the [_policy-removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal) folder. There are four sample scripts provided:  
    * Remove the Audit Policy assignment
    * Remove the Audit Policy definition
    * Remove the Deny Policy assignment
@@ -103,5 +103,5 @@ Removing a Delegation can be achieved in one of two ways:
    * Subscription Owners can go to the Service Providers page and delete the delegation
    * Service Provider users who have been assigned the **Managed Services Registration Assignment Delete Role** can go the the My Customers page and delete the delegation
   
-2. Programmatically using a script, an exmaple of which is available in the [_Removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/removal) folder within the _scripts_ folder. 
+2. Programmatically using a script, an exmaple of which is available in the [_Removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/removal) folder within the _scripts_ folder.  
   
