@@ -31,11 +31,11 @@ The [_policy-templates-samples_](https://github.com/paulfcollins/public-azure/tr
 
 The [_scripts_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts) folder contains sample scripts to:
 
-* Enable management of a Customer Tenant [LINK](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
-* Query Azure Resource Graph (ARG) for storage accounts that do not have Secure Transfer enabled [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-* Query ARG (as above) and deploy the Audit policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-* Query ARG (as above) and deploy the Deny policy [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
-* Scripts to remove the assignments and definitions for the Audit and Deny policies [<Link>](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
+* [Enable management of a Customer Tenant](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/deployment)
+* [Query Azure Resource Graph (ARG) for storage accounts that do not have Secure Transfer enabled](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+* [Query ARG (as above) and deploy the Audit policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+* [Query ARG (as above) and deploy the Deny policy](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-deployment)
+* [Scripts to remove the assignments and definitions for the Audit and Deny policies](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal)
 
 ## Deploy the Demo
   
