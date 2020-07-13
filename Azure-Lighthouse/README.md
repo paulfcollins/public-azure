@@ -97,6 +97,7 @@ Now that we have tested and proved the deplyment of Azure Policy to a Delegated 
 ![Delete Azure Policy via Portal](https://github.com/paulfcollins/public-azure/blob/master/Azure-Lighthouse/images/deletepolicyassignment1.png)  
 This method is fine if you do not have too many Delegated Subscriptions, but using scripts would be more efficient for a scale deployment.  
 2. Programmatically using the example scripts in the [_policy-removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/policy-removal) folder. There are four sample scripts provided:  
+
    * Remove the Audit Policy assignment
    * Remove the Audit Policy definition
    * Remove the Deny Policy assignment
