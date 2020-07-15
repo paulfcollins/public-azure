@@ -111,5 +111,5 @@ Removing a Delegation can be achieved in one of two ways:
    * Subscription Owners can go to the Service Providers page and delete the delegation
    * Service Provider users who have been assigned the **Managed Services Registration Assignment Delete Role** can go the the My Customers page and delete the delegation
   
-2. Programmatically using a script, an exmaple of which is available in the [_Removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/removal) folder within the _scripts_ folder.  
+2. Programmatically using a script, an example of which is available in the [_Removal_](https://github.com/paulfcollins/public-azure/tree/master/Azure-Lighthouse/scripts/removal) folder within the _scripts_ folder.  
   
