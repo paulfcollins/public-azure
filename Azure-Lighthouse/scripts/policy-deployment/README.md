@@ -8,7 +8,7 @@ The scripts query [Azure Resource Graph](https://azure.microsoft.com/en-us/featu
   
 The `$MSPTenant` variable in the scripts need to be updated with the _Tenant Id_ value returned by the `Get-AzTenant` cmdlet.
   
-*Exmaple Scripts*
+*Example Scripts*
   
 1. Query Storage Accounts for the Secure Transfer setting
 2. Deploy an Audit Policy for Storage Accounts where the Secure Transfer setting is disabled 
